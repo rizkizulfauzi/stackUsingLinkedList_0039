@@ -1,14 +1,11 @@
 #include <iostream>
-using namespace std; 
-
-
-
+using namespace std;
 
 class Node
 {
-    public:
+public:
     int data;
-    Node* next;
+    Node *next;
 
     Node()
     {
@@ -18,11 +15,22 @@ class Node
 
 class Stack
 {
-    private:
-    Node* top;
+private:
+    Node *top;
 
-    public: Stack()
+public:
+    Stack()
     {
         top = NULL;
+    }
+
+    int push(int value)
+    {
+        Node *newNode = new Node();
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
+        cout << "Push Value : " << value << endl;
+        return value;
     }
 };
