@@ -60,10 +60,17 @@ public:
             Node *current = top;
             while (current != NULL)
             {
-                cout << current->data << "" <<endl;
-                current = current-> next;
+                cout << current->data << "" << endl;
+                current = current->next;
             }
             cout << endl;
         }
     }
 };
+
+int main()
+{
+    Stack stack;
+    int choise = 0;
+    int value ;
+}
